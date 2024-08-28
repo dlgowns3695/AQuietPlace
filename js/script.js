@@ -1150,6 +1150,21 @@ $('.close').click(function(){
 
 gsapPlugIn();
 
-window.addEventListener("resize", function() {
-    // if(모바일 사이즈다) {setTimeOut(0.5초 뒤에 새로고침)}
-})
+
+function getState() {
+    const width = window.innerWidth;
+    return width < 769 ? 1 : 0; // 모바일이면 1, PC이면 0 반환
+  }
+
+  const landingState = getState();
+  // 사이즈 변할때 모바일,PC반응하기
+  window.addEventListener('resize', function() {
+    const currentState = getState();
+    // console.log(landingState !== currentState)
+    if (landingState !== currentState) {
+      console.log("상태 변경, 500ms 후 새로고침");
+      setTimeout(() => {
+        window.location.reload();
+      }, 500); // 500ms 딜레이 후 새로고침
+    }
+  });

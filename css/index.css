@@ -330,16 +330,16 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 
 
 
-/* ***** 몬스터 소개란 부분 ***** */
+/* ***** 몬스터 소개란 부분 0828 20:07 기존  : width: 80%; ***** */
 .monsterDec{
     position: relative;
-    width: 80%;
+    width: 80vw;
     margin:0 auto;
     padding: 110px;
     height: 12500px;
     /* 12500 */
 
-    background: url(/images/bg_black.png);
+    background: url(/images/bg_black.png) no-repeat;
 
     color: #db0137;
     font-family: "Roboto", sans-serif;
