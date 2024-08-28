@@ -116,7 +116,7 @@ body.dark {background-color: #fff;} /* #9b59b6 */
 .wrapper .menuslide ul{display:flex;flex-flow:column;height: 100dvh;justify-content: center;}
 .wrapper .menuslide ul li{
     margin-bottom: 25px;    
-    background: url('/images/netflixText2.png') no-repeat center center;
+    background: url('images/netflixText2.png') no-repeat center center;
     background-size: 25%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;}
@@ -240,7 +240,7 @@ color: black;
 #section1 .introSOS{width: 1200px; margin: 0 auto;padding: 200px 0 0 0; }
 
 #section1 .introSOS .SOS.En{
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -287,14 +287,14 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 }
 
 .nameContain .textBox .netflix .maskText1 p {
-    background: url('/images/netflixText.png') no-repeat center center;
+    background: url('images/netflixText.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .nameContain .textBox .netflix .maskText2 p {
-    background: url('/images/netflixText.png') no-repeat center center;
+    background: url('images/netflixText.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -339,7 +339,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
     height: 12500px;
     /* 12500 */
 
-    background: url(/images/bg_black.png) no-repeat;
+    background: url(images/bg_black.png) no-repeat;
 
     color: #db0137;
     font-family: "Roboto", sans-serif;
@@ -362,7 +362,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 }
 
 .monsterDec .quietPlaceWave .rippedPaper{
-    margin-left: -200px; width: 120%;height: 84px; position: absolute; top: 12650px; left: 0; background: url(/images/ripped_paper.png);
+    margin-left: -200px; width: 120%;height: 84px; position: absolute; top: 12650px; left: 0; background: url(images/ripped_paper.png);
 }
 
 .monsterDec .monsterInformation{
@@ -376,7 +376,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 }
 
 .monsterDec h3{
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -466,7 +466,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 }
 
 .moveName p{
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -486,7 +486,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
     height: 8300px;
     /* background: rgb(10, 6, 60); */
     position: relative;
-    background:url('/images/bg_wall.jpg');
+    background:url('images/bg_wall.jpg');
 
     overflow: hidden;
 }
@@ -572,14 +572,14 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 }
 
 .scrollTextMain01 p{
-    background: url('/images/netflixText.png') no-repeat center center;
+    background: url('images/netflixText.png') no-repeat center center;
     background-size:40%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;  
     
 }
 .scrollTextMain01 span{
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -605,13 +605,13 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 }
 
 .scrollTextMain02 p{
-    background: url('/images/netflixText.png') no-repeat center center;
+    background: url('images/netflixText.png') no-repeat center center;
     background-size:40%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;  
 }
 .scrollTextMain02 span{
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -637,13 +637,13 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 }
 
 .scrollTextMain03 p{
-    background: url('/images/netflixText2.png') no-repeat center center;
+    background: url('images/netflixText2.png') no-repeat center center;
     background-size:40%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;  
 }
 .scrollTextMain03 span{
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -669,13 +669,13 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 }
 
 .scrollTextMain04 p{
-    background: url('/images/netflixText.png') no-repeat center center;
+    background: url('images/netflixText.png') no-repeat center center;
     background-size:40%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;  
 }
 .scrollTextMain04 span{
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -1017,7 +1017,7 @@ animation: text_list 60s linear infinite;
 }
 
 .top .textHelp p {
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -1133,7 +1133,7 @@ animation: text_list 60s linear infinite;
 .credit .credith3 {font-size: 10rem;text-align: center; }
 .section {opacity: 0;margin-bottom: 24rem;text-align: center;}
 .section h3 {
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -1142,7 +1142,7 @@ animation: text_list 60s linear infinite;
     font-weight: bold;
 }
 .section li{
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     line-height: 1.8;
     background-size: cover;
     -webkit-text-fill-color: transparent;
@@ -1158,7 +1158,7 @@ animation: text_list 60s linear infinite;
 .actors div dl dt {text-align: right; color:#222;width:16rem;margin-right:1rem;}
 .actors div dl dd {
     text-align: left;width:18rem;
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     line-height: 1.8;
     background-size: cover;
     -webkit-text-fill-color: transparent;
@@ -1171,7 +1171,7 @@ animation: text_list 60s linear infinite;
 .subActors div dl dt {text-align: right; color:#222;width:16rem;margin-right:1rem;}
 .subActors div dl dd {
     text-align: left;width:18rem;
-    background: url('/images/text2.png') no-repeat center center;
+    background: url('images/text2.png') no-repeat center center;
     line-height: 1.8;
     background-size: cover;
     -webkit-text-fill-color: transparent;
