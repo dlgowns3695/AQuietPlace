@@ -1,0 +1,69 @@
+/* 로딩 화면 전체 스타일 */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5f0f0f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.7s ease;
+}
+
+/* 로딩 퍼센트 위치 및 스타일 */
+.loading .loading-percent {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 5%; /* 하단에 위치 */
+    right: 10%;
+}
+
+/* 발자국 컨테이너 스타일 */
+.loading .foot{
+    position: absolute;
+    bottom: 10%; /* 하단에서 10% 위치 */
+    width: 100%;
+    height: 20%; /* 발자국 높이 조정 */
+    display: flex;
+    align-items: flex-end; /* 발자국이 아래쪽에 붙도록 설정 */
+    justify-content: space-between; /* 발자국 간의 간격 설정 */
+}
+
+/* 발자국 이미지 스타일 */
+.loading .foot{
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    /* animation: footprintMove 5s infinite linear;  */
+}
+
+/* 왼쪽 발자국 회전 설정 */
+.loading .footprints .footprintsLeft{
+    transform: scaleY(-1) rotate(90deg); /* 오른발을 회전시키기 위한 스타일 */
+}
+
+/* 발자국 애니메이션 */
+@keyframes footprintMove {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); /* 화면 왼쪽에서 시작 */
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0); /* 원위치 */
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100vw); /* 화면 오른쪽으로 이동 */
+    }
+}
+
+/* 콘텐츠 숨김 스타일 */
+.content {
+    display: none; /* 로딩이 완료될 때까지 숨김 */
+}
