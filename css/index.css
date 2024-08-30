@@ -86,7 +86,7 @@ body.dark {background-color: #fff;} /* #9b59b6 */
 /***** header logo 쪽 *****/
 #header .logo{position: absolute; top: 80px; left: 80px;}
 #header img{width: 200px;}
-#header .menu { position: absolute; right: 80px; top: 80px;width: 30px; height: 14px;}
+#header .menu { position: absolute; right: 80px; top: 80px;width: 30px; height: 30px;}
 #header .menu img { width: 100%; }
 
 

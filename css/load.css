@@ -1,21 +1,20 @@
-/* 로딩 화면 전체 스타일 */
 .loading {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #5f0f0f;
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 999999999;
     transition: opacity 0.7s ease;
+    background: rgba(0, 0, 0, 0.8); /* 배경 어둡게 설정 */
+    overflow: hidden; /* 내용이 배경을 넘지 않도록 설정 */
 }
 
-/* 로딩 퍼센트 위치 및 스타일 */
 .loading .loading-percent {
     font-size: 2rem;
     position: absolute;
@@ -24,7 +23,6 @@
     transform: translate(-50%, -50%);
 }
 
-/* 발자국 리스트 스타일 */
 .footprints img {
     position: relative;
     list-style: none;
@@ -34,7 +32,6 @@
     height: 100%;
 }
 
-/* 각 발자국의 위치와 회전 조정 */
 .footprint-left, .footprint-right {
     position: absolute;
     width: 50px;
@@ -49,26 +46,24 @@
     transform: scaleY(1) rotate(90deg);
 }
 
-/* 첫번째 왼발 위치 */
-.footprint-left:nth-of-type(1) {
-    left: 0;
-    top: 45%;
-}
-
-/* 첫번째 오른발 위치 */
-.footprint-right:nth-of-type(2) {
-    left: 10%;
-    top: 55%;
-}
-
-/* 두번째 왼발 위치 */
-.footprint-left:nth-of-type(3) {
-    left: 20%;
-    top: 45%;
-}
-
-/* 두번째 오른발 위치 */
-.footprint-right:nth-of-type(4) {
-    left: 30%;
-    top: 55%;
-}
+.footprint-left:nth-of-type(1) { left: 0; top: 45%; }
+.footprint-right:nth-of-type(2) { left: 5%; top: 55%; }
+.footprint-left:nth-of-type(3) { left: 10%; top: 45%; }
+.footprint-right:nth-of-type(4) { left: 15%; top: 55%; }
+.footprint-left:nth-of-type(5) { left: 20%; top: 45%; }
+.footprint-right:nth-of-type(6) { left: 25%; top: 55%; }
+.footprint-left:nth-of-type(7) { left: 30%; top: 45%; }
+.footprint-right:nth-of-type(8) { left: 35%; top: 55%; }
+.footprint-left:nth-of-type(9) { left: 40%; top: 45%; }
+.footprint-right:nth-of-type(10) { left: 45%; top: 55%; }
+.footprint-left:nth-of-type(11) { left: 50%; top: 45%; }
+.footprint-right:nth-of-type(12) { left: 55%; top: 55%; }
+.footprint-left:nth-of-type(13) { left: 60%; top: 45%; }
+.footprint-right:nth-of-type(14) { left: 65%; top: 55%; }
+.footprint-left:nth-of-type(15) { left: 70%; top: 45%; }
+.footprint-right:nth-of-type(16) { left: 75%; top: 55%; }
+.footprint-left:nth-of-type(17) { left: 80%; top: 45%; }
+.footprint-right:nth-of-type(18) { left: 85%; top: 55%; }
+.footprint-left:nth-of-type(19) { left: 90%; top: 45%; }
+.footprint-right:nth-of-type(20) { left: 95%; top: 55%; }
+.footprint-left:nth-of-type(21) { left: 100%; top: 45%; }
