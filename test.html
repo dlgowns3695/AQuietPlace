@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP Text Effects</title>
+  <style>
+    body {
+      /* 전체 페이지를 중앙 정렬하고 배경색과 글자색을 설정 */
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .lodingtext {
+      /* 텍스트의 크기와 여백 설정 */
+      font-size: 3rem;
+      margin: 20px 0;
+      overflow: hidden; /* 텍스트가 애니메이션으로 인해 넘치는 부분 숨기기 */
+    }
+
+    .char {
+      /* 개별 문자 스타일 설정 */
+      display: inline-block;
+    }
+
+    .word {
+      /* 개별 단어 스타일 설정 (현재는 사용되지 않음) */
+      display: inline-block;
+      margin-right: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Text Elements for Animation -->
+  <div class="lodingtext" id="split1">Fade Up Split</div>
+  <div class="lodingtext" id="split5">Fade Out with Rotation</div>
+
+  <!-- GSAP Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    // Utility function to split text into spans
+    function splitTextToSpans(element, type) {
+      const text = element.textContent;
+      element.innerHTML = text.split(type === 'char' ? '' : ' ').map(letter => `<span class="${type}">${letter}</span>`).join(type === 'char' ? '' : ' ');
+    }
+
+    // 1. Fade Up Split with Fade Out to Top
+    const fadeUpSplit = document.querySelector("#split1");
+    splitTextToSpans(fadeUpSplit, 'char');
+    gsap.fromTo("#split1 .char", {
+      opacity: 0,
+      y: 50
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      stagger: 0.05,
+      ease: "power2.out",
+      onComplete: () => {
+        // 애니메이션이 완료된 후에 Fade Out 애니메이션 실행
+        gsap.to("#split1 .char", {
+          opacity: 0,
+          y: -50,
+          duration: 1.5,
+          stagger: 0.05,
+          ease: "power2.in",
+          delay: 1 // Fade Out 애니메이션 시작 전 대기 시간
+        });
+      }
+    });
+
+    // 5. Fade Out with Rotation and Fade Out to Top
+    const fadeRotateSplit = document.querySelector("#split5");
+    splitTextToSpans(fadeRotateSplit, 'char');
+    gsap.fromTo("#split5 .char", {
+      opacity: 0,
+      y: 50,
+      rotation: -90
+    }, {
+      opacity: 1,
+      y: 0,
+      rotation: 0,
+      duration: 1.5,
+      stagger: 0.05,
+      ease: "power2.out",
+      onComplete: () => {
+        // 애니메이션이 완료된 후에 Fade Out 애니메이션 실행
+        gsap.to("#split5 .char", {
+          opacity: 0,
+          y: -50,
+          rotation: 90,
+          duration: 1.5,
+          stagger: 0.05,
+          ease: "power2.in",
+          delay: 1 // Fade Out 애니메이션 시작 전 대기 시간
+        });
+      }
+    });
+  </script>
+</body>
+</html>
