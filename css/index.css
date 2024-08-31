@@ -333,7 +333,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 /* ***** 몬스터 소개란 부분 0828 20:07 기존  : width: 80%; ***** */
 .monsterDec{
     position: relative;
-    width: 80vw;
+    width: 100vw;
     margin:0 auto;
     padding: 110px;
     height: 12500px;
@@ -344,8 +344,11 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
     color: #db0137;
     font-family: "Roboto", sans-serif;
     letter-spacing: -0.025em;  
+
+    opacity: 0;
     
 }
+.monsterDecContain{width: 80vw;}
 .monsterDec .quietPlaceWave{
     width: 100vw; height: 100vh; text-align: center;
 }
@@ -503,8 +506,37 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
     text-align: center;
 }
 
-.carSection .carGuide img {max-width: 100%;height: auto;}
+.carSection .carGuide img {    
+    z-index: 2;
+    position: relative;max-width: 100%;height: auto;}
+.lightLeft {
+    position: absolute;
+    top: 114%;
+    left: 24%;
+    transform: rotate(7deg) translateX(-50%);
+    width: 64px;
+    height: 258px;
+    background: linear-gradient(to bottom, rgba(255, 255, 150, 1) 0%, rgba(255, 255, 150, 0) 100%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+    border-radius: 50% / 100% 100% 0 0;
+}
 
+.lightRight {
+    position: absolute;
+    top: 112%;
+    left: 78%;
+    transform: rotate(-7deg) translateX(-50%);
+    width: 64px;
+    height: 280px;
+    background: linear-gradient(to bottom, rgba(255, 255, 150, 1) 0%, rgba(255, 255, 150, 0) 100%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+    border-radius: 50% / 100% 100% 0 0;
+}
+    
 
 /* *** 인물 딤 처리 ****/
 

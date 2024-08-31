@@ -198,6 +198,31 @@ gsap.to('.netflix', {
     
 });
 
+// gsap.to('.monsterDec', {
+//     scrollTrigger: {
+//         trigger: '.monsterDec',
+//         start: 'top 80%',
+//         // end: '5000px',
+//         scrub: true,
+//         markers: true,
+        
+//     }
+    
+// });
+
+gsap.timeline({
+    scrollTrigger: {
+      trigger: '.monsterDec',
+      scrub: true,
+      start: 'top 15%',
+      end: '+=600px',
+      overwrite: true,
+    //   markers: true,
+    }
+  }).to('.monsterDec', {opacity: 1})
+
+
+
 gsap.to('.monsterDec .wrapper .title', {
     scrollTrigger: {
         trigger: '.monsterDec .wrapper .title',
@@ -405,6 +430,30 @@ const s3 = gsap.timeline({
     .to('.carGuide > img', {x: '0vw',})
     .to('.carGuide > img', {y: '5vw',
 })
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.line02',
+        start: '-450px top',
+        end: 'bottom top',
+        scrub: true, // 스크롤에 따라 애니메이션이 연동되도록
+        markers: true // 디버깅을 위해 스크롤 트리거의 시작과 끝을 표시
+    }
+})
+// // 두 번 깜빡이는 애니메이션
+// .to('.lightLeft, .lightRight', {
+//     opacity: 1,
+//     duration: 0.1,
+//     repeat: 2,
+//     yoyo: true,
+//     stagger: 0.1
+// })
+// 최종 상태로 라이트를 완전히 켜는 애니메이션
+.to('.lightLeft, .lightRight', {
+    opacity: 1,
+});
+
+
 
 /***** 투명도 조절 ****** */
 const moveCutUl = gsap.utils.toArray('.carSection .moveCut ul li');
@@ -1168,3 +1217,7 @@ function getState() {
       }, 500); // 500ms 딜레이 후 새로고침
     }
   });
+
+  window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0); // 페이지를 맨 위로 스크롤
+});
