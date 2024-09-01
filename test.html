@@ -5,105 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GSAP Text Effects</title>
   <style>
-    body {
-      /* 전체 페이지를 중앙 정렬하고 배경색과 글자색을 설정 */
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: white;
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
+    #twitch {
+      font-size: 4em;
+      margin: 0 auto;
+      height: 100vh; 
+      text-transform: uppercase;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    #twitch > div {
+      position: absolute;
+      margin: 2vh 0;
+      opacity: 0;
+      left: 10vw;
+      width: 80vw;
+      animation: switch 15s linear infinite;
+    }
+
+    /* 첫 번째 div에만 애니메이션 적용 */
+    #twitch > div:first-child {
+      animation-delay: 0s; /* 첫 번째 div는 0초 지연 */
+    }
+
+    @keyframes switch {
+        0% { opacity: 0; filter: blur(3px); transform:scale(.95);  text-shadow: 40px 42px 2px rgba(0,0,0,.2)}
+        5% { opacity: .7; filter: blur(2px); transform:scale(1);  text-shadow: 40px 42px 2px rgba(0,0,0,.1)}
+        8% { opacity: .7; filter: blur(2px); transform:scale(1);color: #fff;  text-shadow: 40px 42px 2px rgba(0,0,0,.1)}
+        13% { opacity: .7; filter: blur(3px); transform:scale(1.1);color: #000;  text-shadow: 40px 42px 2px rgba(0,0,0,.1)}
+        13.1% { opacity: .8; filter: blur(2px); transform:scale(2);color: #fff;  text-shadow: -40px -142px 2px rgba(0,0,0,.1)}
+        13.2% { opacity: .8; filter: blur(2px); transform:scale(2);color: #fff;  text-shadow: 40px 42px 2px rgba(0,0,0,0,.1)}    
+        16.1% { opacity: .8; filter: blur(2px); transform:scale(2);color: #111;;  text-shadow: 40px 42px 2px rgba(0,0,0,.1)}
+        16.2% { opacity: .7; filter: blur(2px); transform:scale(2);color: #fff;  text-shadow: 90px 52px 2px rgba(0,0,0,.1)}
+        18% { opacity: .7; filter: blur(5px); transform:scale(1.1);color: black;  text-shadow: 90px 52px 2px rgba(0,0,0,0)}
+        18.1% { opacity: .7; filter: blur(5px); transform:scale(1.1);color: #000;  text-shadow: -90px -52px 2px rgba(0,0,0,0)}
+        19% { opacity: 0; filter: blur(3px); transform:scale(1); color: #000;  text-shadow: 40px 42px 2px} 
+        21.1% { opacity: .7; filter: blur(5px); transform:scale(1.1);color: #000;  text-shadow: -90px -52px 2px rgba(0,0,0,0)}
+        50% { opacity: 0}
+        100% { opacity: 0}
+    }
+
+    /* Background */
+
+    body {
+      padding: 0;
       margin: 0;
+      width: 100vw;
+      background-color: rgba(0,0,0,.4);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position:center bottom;
+      background-attachment: fixed;
+      overflow: hidden;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #222;
+      text-align: center;
     }
 
-    .lodingtext {
-      /* 텍스트의 크기와 여백 설정 */
-      font-size: 3rem;
-      margin: 20px 0;
-      overflow: hidden; /* 텍스트가 애니메이션으로 인해 넘치는 부분 숨기기 */
-    }
-
-    .char {
-      /* 개별 문자 스타일 설정 */
-      display: inline-block;
-    }
-
-    .word {
-      /* 개별 단어 스타일 설정 (현재는 사용되지 않음) */
-      display: inline-block;
-      margin-right: 0.2rem;
-    }
+   
   </style>
 </head>
 <body>
+  <div id="twitch">  
+    <div>Horror<span>Movie</span></div>
 
-  <!-- Text Elements for Animation -->
-  <div class="lodingtext" id="split1">Fade Up Split</div>
-  <div class="lodingtext" id="split5">Fade Out with Rotation</div>
-
-  <!-- GSAP Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script>
-    // Utility function to split text into spans
-    function splitTextToSpans(element, type) {
-      const text = element.textContent;
-      element.innerHTML = text.split(type === 'char' ? '' : ' ').map(letter => `<span class="${type}">${letter}</span>`).join(type === 'char' ? '' : ' ');
-    }
-
-    // 1. Fade Up Split with Fade Out to Top
-    const fadeUpSplit = document.querySelector("#split1");
-    splitTextToSpans(fadeUpSplit, 'char');
-    gsap.fromTo("#split1 .char", {
-      opacity: 0,
-      y: 50
-    }, {
-      opacity: 1,
-      y: 0,
-      duration: 1.5,
-      stagger: 0.05,
-      ease: "power2.out",
-      onComplete: () => {
-        // 애니메이션이 완료된 후에 Fade Out 애니메이션 실행
-        gsap.to("#split1 .char", {
-          opacity: 0,
-          y: -50,
-          duration: 1.5,
-          stagger: 0.05,
-          ease: "power2.in",
-          delay: 1 // Fade Out 애니메이션 시작 전 대기 시간
-        });
-      }
-    });
-
-    // 5. Fade Out with Rotation and Fade Out to Top
-    const fadeRotateSplit = document.querySelector("#split5");
-    splitTextToSpans(fadeRotateSplit, 'char');
-    gsap.fromTo("#split5 .char", {
-      opacity: 0,
-      y: 50,
-      rotation: -90
-    }, {
-      opacity: 1,
-      y: 0,
-      rotation: 0,
-      duration: 1.5,
-      stagger: 0.05,
-      ease: "power2.out",
-      onComplete: () => {
-        // 애니메이션이 완료된 후에 Fade Out 애니메이션 실행
-        gsap.to("#split5 .char", {
-          opacity: 0,
-          y: -50,
-          rotation: 90,
-          duration: 1.5,
-          stagger: 0.05,
-          ease: "power2.in",
-          delay: 1 // Fade Out 애니메이션 시작 전 대기 시간
-        });
-      }
-    });
-  </script>
+  </div>
 </body>
 </html>
