@@ -1,86 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GSAP Text Effects</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography Animation</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+        }
 
-    #twitch {
-      font-size: 4em;
-      margin: 0 auto;
-      height: 100vh; 
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-    }
+        .stage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            
+        }
 
-    #twitch > div {
-      position: absolute;
-      margin: 2vh 0;
-      opacity: 0;
-      left: 10vw;
-      width: 80vw;
-      animation: switch 32s linear infinite;
-    }
+        #stage1 {
+            background-color: black;
+            color: red;
+            opacity: 1;
+        }
 
-    /* 첫 번째 div에만 애니메이션 적용 */
-    #twitch > div:first-child {
-      animation-delay: 0s; /* 첫 번째 div는 0초 지연 */
-    }
+        #stage1 .text {
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0;
+            transform: translateY(100px);
+            
+        }
 
-    @keyframes switch {
-        0% { opacity: 0; filter: blur(3px); transform:scale(.95);  text-shadow: 40px 42px 2px rgba(0,0,0,.2)}
-        5% { opacity: .7; filter: blur(2px); transform:scale(1);  text-shadow: 40px 42px 2px rgba(0,0,0,.1)}
-        8% { opacity: .7; filter: blur(2px); transform:scale(1);color: #fff;  text-shadow: 40px 42px 2px rgba(0,0,0,.1)}
-        13% { opacity: .7; filter: blur(3px); transform:scale(1.1);color: #000;  text-shadow: 40px 42px 2px rgba(0,0,0,.1)}
-        13.1% { opacity: .8; filter: blur(2px); transform:scale(2);color: #fff;  text-shadow: -40px -142px 2px rgba(0,0,0,.1)}
-        13.2% { opacity: .8; filter: blur(2px); transform:scale(2);color: #fff;  text-shadow: 40px 42px 2px rgba(0,0,0,0,.1)}    
-        16.1% { opacity: .8; filter: blur(2px); transform:scale(2);color: #111;;  text-shadow: 40px 42px 2px rgba(0,0,0,.1)}
-        16.2% { opacity: .7; filter: blur(2px); transform:scale(2);color: #fff;  text-shadow: 90px 52px 2px rgba(0,0,0,.1)}
-        18% { opacity: .7; filter: blur(5px); transform:scale(1.1);color: black;  text-shadow: 90px 52px 2px rgba(0,0,0,0)}
-        18.1% { opacity: .7; filter: blur(5px); transform:scale(1.1);color: #000;  text-shadow: -90px -52px 2px rgba(0,0,0,0)}
-        19% { opacity: 0; filter: blur(3px); transform:scale(1); color: #000;  text-shadow: 40px 42px 2px} 
-        21.1% { opacity: .7; filter: blur(5px); transform:scale(1.1);color: #000;  text-shadow: -90px -52px 2px rgba(0,0,0,0)}
-        50% { opacity: 0}
-        100% { opacity: 0}
-    }
+        #text1 { top: 10px; left: 10px; }
+        #text2 { bottom: 10px; left: 10px; }
+        #text3 { top: 10px; right: 10px; }
+        #text4 { bottom: 10px; right: 10px; }
 
-    /* Background */
+        #stage2 {
+            background-color: red;
+            color: black;
+            opacity: 0; /* Hidden by default */
+        }
 
-    body {
-      padding: 0;
-      margin: 0;
-      width: 100vw;
-      background-color: rgba(0,0,0,.4);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position:center bottom;
-      background-attachment: fixed;
-      overflow: hidden;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      color: #222;
-      text-align: center;
-    }
+        #stage2 .text {
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0;
+            transform: translateY(100px);
+            
+        }
 
-   
-  </style>
+        #text5 { top: 10px; left: 10px; }
+        #text6 { bottom: 10px; left: 10px; }
+        #text7 { top: 10px; right: 10px; }
+        #text8 { bottom: 10px; right: 10px; }
+    </style>
 </head>
 <body>
-  <div id="twitch">  
-    <div>Horror<span>Movie</span></div>
-    <div>Horror<span>Movie</span></div>
-    <div>Horror<span>Movie</span></div>
-    <div>Horror<span>Movie</span></div>
-    <div>Horror<span>Movie</span></div>
-    <div>Horror<span>Movie</span></div>
-    <div>Horror<span>Movie</span></div>
+    <!-- 첫 번째 창 -->
+    <div class="stage" id="stage1">
+        <div class="text" id="text1">First</div>
+        <div class="text" id="text2">Second</div>
+        <div class="text" id="text3">Third</div>
+        <div class="text" id="text4">Fourth</div>
+    </div>
 
-  </div>
+    <!-- 두 번째 창 -->
+    <div class="stage" id="stage2">
+        <div class="text" id="text5">Fifth</div>
+        <div class="text" id="text6">Sixth</div>
+        <div class="text" id="text7">Seventh</div>
+        <div class="text" id="text8">Eighth</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stage1 = document.getElementById('stage1');
+            const stage2 = document.getElementById('stage2');
+
+            // 타이포그래피 애니메이션 함수
+            function animateText(stage, texts) {
+                texts.forEach((text, index) => {
+                    setTimeout(() => {
+                        text.style.opacity = 1;
+                        text.style.transform = 'translateY(0)';
+                    }, index * 500); // 각 텍스트마다 0.5초 간격으로 나타나도록
+                });
+            }
+
+            // 첫 번째 단계 애니메이션
+            const stage1Texts = document.querySelectorAll('#stage1 .text');
+            animateText(stage1, stage1Texts);
+
+            // 첫 번째 단계에서 두 번째 단계로의 전환
+            setTimeout(() => {
+                stage1.style.opacity = '0'; // 첫 번째 단계 숨김
+                stage2.style.opacity = '1'; // 두 번째 단계 나타남
+                // 두 번째 단계 애니메이션
+                const stage2Texts = document.querySelectorAll('#stage2 .text');
+                animateText(stage2, stage2Texts);
+            }, stage1Texts.length * 500); // 모든 텍스트가 나타난 후 2초 대기 후 전환
+        });
+    </script>
 </body>
 </html>
