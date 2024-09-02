@@ -1,21 +1,3 @@
-let gsapPlugIn = () => {
-    
-
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-//   }
-gsap.registerPlugin(ScrollTrigger); /* https://gsap.com/docs/v3/Plugins/ScrollSmoother/ */
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother); /* https://gsap.com/docs/v3/Plugins/ScrollSmoother/ */
-
-// create the scrollSmoother before your scrollTriggers
-// ScrollSmoother.create({
-//     smooth:1, // how long (in seconds) it takes to "catch up" to the native scroll position
-//     effects: true, // looks for data-speed and data-lag attributes on elements
-//     // smoothTouch: 0.001, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-//     normalizeScroll: true,
-//     ignoreMobileResize: true,
-//   });
-
 
 document.addEventListener('mousemove', (e) => {
     // let mouseX = e.pageX;
@@ -217,8 +199,8 @@ gsap.timeline({
       scrub: true,
       start: 'top 15%',
       end: '+=600px',
-      overwrite: true,
-    //   markers: true,
+      
+      markers: true,
     }
   }).to('.monsterDec', {opacity: 1})
 
@@ -370,7 +352,7 @@ $(window).scroll(function() {
         } else {
             // 스크롤 위치가 이동 위치를 넘어서지 않을 때 초기 위치로 되돌림
             monsterinfo.css({
-                'transform': 'translate(0, -50%)'
+                'transform': 'translate(-50%, -50%)'
             });
         }
         
@@ -438,7 +420,7 @@ gsap.timeline({
         start: '-450px top',
         end: 'bottom top',
         scrub: true, // 스크롤에 따라 애니메이션이 연동되도록
-        markers: true // 디버깅을 위해 스크롤 트리거의 시작과 끝을 표시
+        // markers: true // 디버깅을 위해 스크롤 트리거의 시작과 끝을 표시
     }
 })
 // // 두 번 깜빡이는 애니메이션
@@ -1195,10 +1177,6 @@ $('.menu').click(function(){
 $('.close').click(function(){
     $('.wrapper .menuslide').toggleClass('open');
 });
-
-}
-
-gsapPlugIn();
 
 
 function getState() {

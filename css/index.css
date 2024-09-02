@@ -357,7 +357,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
     height: 12500px;
     /* 12500 */
 
-    background: url(../images/bg_black.png) no-repeat;
+    background: url(../images/bg_black.png);
 
     color: #db0137;
     font-family: "Roboto", sans-serif;
@@ -496,7 +496,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
     
 }
 
-.moveName .moveTitle{transform: translate(1400px, 0px);}
+.moveName .moveTitle{transform: translate(1800px, 0px);}
 .moveName .moveWatching{transform: translate(-750px, 0px);}
 
 
@@ -1540,7 +1540,20 @@ animation: text_list 60s linear infinite;
 
 }
 @media screen and (max-width:768px){
+    .loading-percent span{font-size: 7rem;}
     /* body{background-color: aquamarine;} */
+
+    .nextloadingRed{padding: 1rem;}
+    .nextloadingRed .nextLoadingText{font-size:4rem;}
+    .nextloadingRed .nextLoadingTextBot{flex: none;}
+
+    .nextloadingBlack{
+        padding: 1rem; 
+        gap: 20rem;     
+        flex-direction: column;
+        justify-content: center;   
+    }
+    .nextloadingBlack .nextLoadingText{font-size:4rem;}
 
     #section1 .intro {height:100dvh;}
     #section1 .introSOS{width: 80%; margin: 0 auto;padding: 0;height: 100dvh;position: relative;top: 50%;transform: translateY(-16%);}
@@ -1578,7 +1591,15 @@ animation: text_list 60s linear infinite;
     .wrapper .menuslide.open {left: 0;}
 
     .intro .ravenPc{display: none;}
-    .intro .ravenMobile{display: block;}
+    .intro .ravenMobile{        
+        overflow: hidden;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        position: absolute;
+        display: block;
+        right: 0;
+    }
     .intro .ravenMobile .raven01{ width: 35px; position: absolute; top: 100px; left:50px; }
     .intro .ravenMobile .raven02{ width: 50px; position: absolute; top: 200px; right: 100px; }
     .intro .ravenMobile .raven03{ width: 70px; position: absolute; top: 350px; right: 150px; }
@@ -1589,6 +1610,7 @@ animation: text_list 60s linear infinite;
   
     .titleDisplayNone .titleMobile {line-height:1.1;}
     /* .monsterDec{overflow: hidden;} */
+    .monsterDecContain{width: 100vw;}
     .monsterDec .wrapper .title { display: none;}
 
     .monsterDec .wrapper .titleSize{flex:content}
@@ -1602,8 +1624,11 @@ animation: text_list 60s linear infinite;
     .monsterDec .wrapper .monsterMargin{margin: 0;}
     .monsterDec h3{font-size:3rem;margin-bottom:2rem;}
 
-    /* .monsterinfo li{top:10%;left: 0;} */
-    .monsterinfo li img{max-width: 90%; height: auto;}
+    .monsterinfo li{width: 80vw;}
+    .monsterinfo li img{
+        width: 100%;
+        
+    }
 
     .moveName{display: none;}
 
@@ -1612,18 +1637,20 @@ animation: text_list 60s linear infinite;
 
     .scrollTextMain01 p, .scrollTextMain02 p,.scrollTextMain03 p,.scrollTextMain04 p{font-size: 2rem; background-size: 80%;}
 
-    .subIntro .textIntroImgIntro .textIntro{font-size: 7rem;}
+    .subIntro .textIntroImgIntro .textIntro{font-size: 7rem; display: flex;flex-direction: column;gap: 5rem; }
 
     .subIntro .textIntroImgIntro .textIntro hr{margin: 10px;}
     .subIntro .textIntroImgIntro .textIntro .text01{transform: translate(500px, 0px);}
     .subIntro .textIntroImgIntro .textIntro .text02{transform: translate(-13000px, 0px); -webkit-text-stroke: 2px #db0137; text-stroke: 2px #db0137;color:transparent}
     .subIntro .textIntroImgIntro .textIntro .text03{transform: translate(700px, 0px);}
-    .subIntro .textIntroImgIntro .textIntro .text04{transform: translate(-11000px, 0px); -webkit-text-stroke: 2px #db0137;text-stroke: 2px #db0137;color:transparent}
+    .subIntro .textIntroImgIntro .textIntro .text04{display: none;}
+    /* .subIntro .textIntroImgIntro .textIntro .text04{transform: translate(-11000px, 0px); -webkit-text-stroke: 2px #db0137;text-stroke: 2px #db0137;color:transparent} */
 
 
     .subIntro .textIntroImgIntro .textIntro .textHr01 {width: 7500px; border-color: #750722; transform: translate(1600px, 0px);}
     .subIntro .textIntroImgIntro .textIntro .textHr02 {width: 6000px; border-color: #750722; transform: translate(-6500px, 0px);}
-    .subIntro .textIntroImgIntro .textIntro .textHr03 {width: 7200px; border-color: #750722; transform: translate(2000px, 0px);}
+    .subIntro .textIntroImgIntro .textIntro .textHr03 {display: none;}
+    /* .subIntro .textIntroImgIntro .textIntro .textHr03 {width: 7200px; border-color: #750722; transform: translate(2000px, 0px);} */
 
     .characterInfo img{max-width: 60%; height: auto;}
 
