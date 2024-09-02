@@ -53,24 +53,42 @@ body.dark {background-color: #fff;} /* #9b59b6 */
 /***** 스크롤바 *****/
 
 /* Let's get this party started */
-::-webkit-scrollbar {
+
+body::-webkit-scrollbar {
+    width: 4px;
+    background-color: #222;
+  }
+  
+  body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #222;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+    background-color: #db0137;
+  }
+  
+/* ::-webkit-scrollbar {
     width: 10px; height:10px;
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgb(226, 226, 226);
     -webkit-border-radius: 10px;
     border-radius: 10px;
-}
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: rgba(190, 190, 190, 0.7);
     -webkit-box-shadow: inset 0 0 6px rgba(226, 226, 226,0.5);
-}
+} */
 ::-webkit-scrollbar-thumb:window-inactive {
    background: rgba(200, 200, 200, 0.4);
 }
