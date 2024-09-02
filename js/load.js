@@ -2,10 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const loading = document.querySelector('.loading');
     const nextLoadingRed = document.querySelector('.nextloadingRed');
     const nextLoadingBlack = document.querySelector('.nextloadingBlack');
+    const svgElement = document.querySelector('.frequency img');
+    console.log(svgElement)
 
     function updateLoadingPercent(percent) {
         const percentElement = document.querySelector('.loading-percent');
         percentElement.textContent = percent.toString().padStart(3, '0') + '%';
+
+        // 로딩 진행률에 따라 SVG의 clip-path를 조정
+        svgElement.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
     }
 
     let progress = 0;
@@ -18,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loading.style.display = 'none';
                 nextLoadingRed.style.opacity = 1;
                 showNextLoadingTexts();
-            }); // 0.5초 후에 두 번째 로딩 화면을 표시
+            }, 500); // 0.5초 후에 두 번째 로딩 화면을 표시
         }
     }, 50);
 
@@ -83,6 +88,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }, index * 300); // 0.3초 간격으로 텍스트가 나타남
         });
     }
-    
-    
 });

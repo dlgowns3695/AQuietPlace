@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Loading Animation</title>
+    <style>
+        .frequency {
+            position: relative;
+            width: 200px; /* SVG의 너비 */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        img#frequency-svg {
+            width: 100%;
+            height: auto;
+            clip-path: inset(0 100% 0 0); /* 처음엔 전부 감춤 */
+            transition: clip-path 0.5s linear; /* 점진적으로 나타나게 함 */
+        }
+
+        .progress-bar {
+            width: 200px;
+            height: 10px;
+            background-color: #ddd;
+        }
+
+        .progress {
+            width: 0;
+            height: 100%;
+            background-color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="frequency">
+        <img id="frequency-svg" src="images/frequency.svg" alt="Frequency">
+    </div>
+
+
+    <script>
+        // 예제: 로딩을 3초에 걸쳐 0%에서 100%로 증가시키기
+        let progressElement = document.getElementById('progress');
+        let svgElement = document.getElementById('frequency-svg');
+        let progress = 0;
+
+        function updateProgress() {
+            progress += 1;
+            progressElement.style.width = progress + '%';
+            svgElement.style.clipPath = `inset(0 ${100 - progress}% 0 0)`; // 로딩 진행률에 따라 SVG 표시
+            if (progress < 100) {
+                setTimeout(updateProgress, 30); // 30ms마다 1%씩 증가
+            }
+        }
+
+        // 로딩 시작
+        updateProgress();
+    </script>
+
+</body>
+</html>

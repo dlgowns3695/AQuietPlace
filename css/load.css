@@ -82,11 +82,13 @@
     overflow: hidden;
     text-align: center;
   }
-  /* 주파수 */
-  .frequency{
-    position: absolute;
-    width: 300px;
-  }
+  .frequency {position: absolute;}
+  .frequency img {
+    width: 300px; /* 원하는 크기로 조절 */
+    height: auto;
+    clip-path: inset(0 100% 0 0); /* 처음엔 전부 감춤 */
+    transition: clip-path 0.5s linear;
+}
   .char {display: inline-block;}
 
   .word {display: inline-block; margin-right: 0.2rem;}
