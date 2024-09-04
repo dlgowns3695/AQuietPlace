@@ -17,6 +17,7 @@ body {
   transition: background 0.2s linear;
   cursor: none; 
   /*  */
+  overflow-x: clip;
 }
 
 body.dark {background-color: #fff;} /* #9b59b6 */

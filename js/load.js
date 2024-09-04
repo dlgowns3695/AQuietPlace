@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 showNextLoadingTexts();
             }, 500); // 0.5초 후에 두 번째 로딩 화면을 표시
         }
-    }, 50);
+    }, 30);
 
     function showNextLoadingTexts() {
         const texts = document.querySelectorAll('.nextloadingRed .nextLoadingText');
@@ -80,8 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                 img.style.left = `${randomX}px`;
                                 img.style.top = `${randomY}px`;
                                 img.style.opacity = 1;
+                                // -10도 ~ 10도
+                                img.style.transform = `rotate(${randomX}deg)`;
                                 img.style.transition = 'opacity 0.2s ease';
-    
                             }, delay);
                             delay += 100; // 점점 빠르게 나타나도록
                         });
