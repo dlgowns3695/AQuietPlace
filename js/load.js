@@ -73,18 +73,22 @@ document.addEventListener('DOMContentLoaded', () => {
                             setTimeout(() => {
                                 const imgWidth = img.clientWidth;
                                 const imgHeight = img.clientHeight;
-                                const randomX = Math.floor(Math.random() * (window.innerWidth - imgWidth));
-                                const randomY = Math.floor(Math.random() * (window.innerHeight - imgHeight));
-    
+                                const randomX = Math.floor(Math.random() * (window.innerWidth - (imgWidth)/2)-150);
+                                const randomY = Math.floor(Math.random() * (window.innerHeight - (imgHeight/2))-150);
+                                const randomRotate = Math.random() * 20 - 10; // -10도 ~ 10도 사이의 난수 생성
+
+
+
                                 img.style.position = 'absolute';
                                 img.style.left = `${randomX}px`;
                                 img.style.top = `${randomY}px`;
                                 img.style.opacity = 1;
                                 // -10도 ~ 10도
-                                img.style.transform = `rotate(${randomX}deg)`;
+                                img.style.transform = `rotate(${randomRotate}deg)`;
                                 img.style.transition = 'opacity 0.2s ease';
+                                console.log(randomX + '<< randomX')
                             }, delay);
-                            delay += 100; // 점점 빠르게 나타나도록
+                            delay += 50; // 점점 빠르게 나타나도록
                         });
     
                         // 모든 이미지가 다 나타난 후 클립패스 실행

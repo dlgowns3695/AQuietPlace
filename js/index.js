@@ -200,7 +200,7 @@ gsap.timeline({
       start: 'top 15%',
       end: '+=600px',
       
-      markers: true,
+    //   markers: true,
     }
   }).to('.monsterDec', {opacity: 1})
 
@@ -374,7 +374,7 @@ gsap.to([".moveTitle", ".moveWatching"], {
         end: "2000px",
         scrub: 1,
         pin: true,
-        markers: true,
+        // markers: true,
     },
     x: function(index) {
         return index % 2 === 0 ? 0 : 650; // 첫 번째 요소는 왼쪽으로 0, 두 번째 요소는 오른쪽으로 이동 600
@@ -988,11 +988,11 @@ gsap.to('.topDim', {
 gsap.to('.house', {
     scrollTrigger: {
         trigger: '.house', 
-        start: 'top -10%', 
-        end: '5500px', 
+        start: 'top 15%', 
+        end: '5000px', 
         pin:true,
         // scrub: true, 
-       // markers: true,
+       markers: true,
     }
 });
 

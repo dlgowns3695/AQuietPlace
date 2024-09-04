@@ -12,7 +12,7 @@ function splitTextToSpans(element, type) {
   }, {
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: .3,
     stagger: 0.05,
     ease: "power2.out",
     onComplete: () => {
@@ -20,7 +20,7 @@ function splitTextToSpans(element, type) {
       gsap.to("#split1 .char", {
         opacity: 0,
         y: -50,
-        duration: 1,
+        duration: .3,
         stagger: 0.05,
         ease: "power2.in",
         delay: 1 // Fade Out 애니메이션 시작 전 대기 시간
@@ -39,7 +39,7 @@ function splitTextToSpans(element, type) {
     opacity: 1,
     y: 0,
     rotation: 0,
-    duration: 1,
+    duration: .3,
     stagger: 0.05,
     ease: "power2.out",
     onComplete: () => {
@@ -48,7 +48,7 @@ function splitTextToSpans(element, type) {
         opacity: 0,
         y: -50,
         rotation: 90,
-        duration: 1,
+        duration: .3,
         stagger: 0.05,
         ease: "power2.in",
         delay: 1 // Fade Out 애니메이션 시작 전 대기 시간

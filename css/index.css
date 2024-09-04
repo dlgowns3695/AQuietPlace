@@ -1631,20 +1631,20 @@ animation: text_list 60s linear infinite;
 
     .scrollTextMain01 p, .scrollTextMain02 p,.scrollTextMain03 p,.scrollTextMain04 p{font-size: 2rem; background-size: 80%;}
 
-    .subIntro .textIntroImgIntro .textIntro{font-size: 7rem; display: flex;flex-direction: column;gap: 7rem; }
+    .subIntro .textIntroImgIntro .textIntro{font-size: 7rem; display: flex;flex-direction: column;gap: 2.5rem; }
 
     .subIntro .textIntroImgIntro .textIntro hr{margin: 10px;}
     .subIntro .textIntroImgIntro .textIntro .text01{transform: translate(500px, 0px);}
     .subIntro .textIntroImgIntro .textIntro .text02{transform: translate(-13000px, 0px); -webkit-text-stroke: 2px #db0137; text-stroke: 2px #db0137;color:transparent}
     .subIntro .textIntroImgIntro .textIntro .text03{transform: translate(700px, 0px);}
-    .subIntro .textIntroImgIntro .textIntro .text04{display: none;}
-    /* .subIntro .textIntroImgIntro .textIntro .text04{transform: translate(-11000px, 0px); -webkit-text-stroke: 2px #db0137;text-stroke: 2px #db0137;color:transparent} */
+    /* .subIntro .textIntroImgIntro .textIntro .text04{display: none;} */
+    .subIntro .textIntroImgIntro .textIntro .text04{transform: translate(-11000px, 0px); -webkit-text-stroke: 2px #db0137;text-stroke: 2px #db0137;color:transparent}
 
 
     .subIntro .textIntroImgIntro .textIntro .textHr01 {width: 7500px; border-color: #750722; transform: translate(1600px, 0px);}
     .subIntro .textIntroImgIntro .textIntro .textHr02 {width: 6000px; border-color: #750722; transform: translate(-6500px, 0px);}
-    .subIntro .textIntroImgIntro .textIntro .textHr03 {display: none;}
-    /* .subIntro .textIntroImgIntro .textIntro .textHr03 {width: 7200px; border-color: #750722; transform: translate(2000px, 0px);} */
+    /* .subIntro .textIntroImgIntro .textIntro .textHr03 {display: none;} */
+    .subIntro .textIntroImgIntro .textIntro .textHr03 {width: 7200px; border-color: #750722; transform: translate(2000px, 0px);}
     .characterInfo{top: -18%;}
     .characterInfo img{max-width: 60%; height: auto;}
 
