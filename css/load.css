@@ -128,9 +128,9 @@
 
   
   }
-  .nextloadingRed .nextLoadingText{font-size: 13rem;}
+  .nextloadingRed .nextLoadingText span{font-size: 13rem;}
   .nextloadingRed .nextLoadingTextTop{display: flex; justify-content: space-between;}
-  .nextloadingRed .nextLoadingTextBot{display: flex; justify-content: space-between;}
+  .nextloadingRed .nextLoadingTextBot{display: flex; }
 
   .nextloadingRed #loadingText1,
   .nextloadingRed #loadingText2,
@@ -155,13 +155,18 @@
 
     opacity: 0;
     color: rgb(182, 0, 0);
+    overflow: hidden;
   }
   .nextloadingBlack .loadingCenterImgY{
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
     
-    transition: opacity 0.5s ease-in-out;
   }
-  .nextloadingBlack .nextLoadingText{font-size: 13rem;}
+  .nextloadingBlack .loadingCenterImgY img{
+    opacity: 0;
+  }
+  .nextloadingBlack .nextLoadingText span{font-size: 13rem;}
   .nextloadingBlack .nextLoadingTextTop{display: flex; justify-content: space-between;}
   .nextloadingBlack .nextLoadingTextBot{display: flex; justify-content: space-between;}
 
@@ -171,33 +176,120 @@
 /*  */
 
 .lodingScratch{position: absolute;fill:white;}
-.scratch01{
+.scratch01 {
+  top: -30vh;
+  mix-blend-mode: difference;
+  height: 133vh;
+  left: -35vw;
+  width: 75vw;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 100% 0);
+  transition: clip-path 0.05s ease-in-out;
+}
+
+.scratch02 {
+  top: -21vh;
+  mix-blend-mode: difference;
+  height: 123vh;
+  width: 77vw;
+  position: absolute;
+  left: -18vw;
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 100% 0);
+  transition: clip-path 0.05s ease-in-out;
+}
+.scratch03 {
+  top: 50vh;
+  left: 57vw;
   mix-blend-mode: difference;
   height: 100vh;
-  left: 34vw;
+  width: 36vw;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);
+  transition: clip-path 0.05s ease-in-out;
+  transform: scaleX(-1);
+}
+@media (max-width:1200px){
+  
+  .nextloadingRed .nextLoadingTextBot{
+    justify-content: center;
+  }
+  .nextloadingRed .nextLoadingText span{font-size: 10rem;}
+ 
+}
+
+@media (max-width:1024px){
+  .nextloadingRed .nextLoadingText span{font-size: 8rem;}
+ 
+}
+
+
+
+@media screen and (max-width:768px){
+  
+
+  .loading-percent span{font-size: 7rem;}
+  /* body{background-color: aquamarine;} */
+
+  .nextloadingRed{padding: 1rem;}
+  .nextloadingRed .nextLoadingText span{font-size:4.7rem;}
+  .nextloadingRed .nextLoadingTextBot{
+    display: flex;
+    justify-content: center;
+  }
+
+  .nextloadingBlack{
+      padding: 1rem; 
+      gap: 39rem;     
+      flex-direction: column;
+      justify-content: center;   
+  }
+  .nextloadingBlack .nextLoadingText span{font-size:4.7rem;}
+  .nextloadingBlack .nextLoadingTextBot{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lodingScratch{
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    position: absolute;
+    fill: white;
+    overflow: hidden;
+    mix-blend-mode: difference;
+  }
+  .scratch01{
+    top: -14%;
+    mix-blend-mode: difference;
+    height: 100vh;
+    left: -18vw;
+    width: 100vw;
+    position: absolute;
+    transition: clip-path 0.05s ease-in-out;
+  }
+  .scratch02 {
+    top: 20%;
+    left: -20%;
+    mix-blend-mode: difference;
+    height: 100vh;
+    width: 125vw;
+    position: absolute;
+    transition: clip-path 0.05s ease-in-out;
+}
+.scratch03 {
+  left: 0;
+  top: 67%;
+  mix-blend-mode: difference;
+  height: 100vh;
   width: 100vw;
   position: absolute;
   clip-path: polygon(0 0, 100% 0, 100% 98%, 100% 0);
   transition: clip-path 0.05s ease-in-out;
-
 }
 
-.scratch02{
-  mix-blend-mode: difference;
-  height: 100vh;
-  width: 80vw;
-  position: absolute;
-  left: -40vw;
-  clip-path: polygon(0 0, 100% 0, 100% 98%, 100% 0);
-  transition: clip-path 0.05s ease-in-out;
-
+.nextloadingBlack .loadingCenterImgY img{
+  scale: 0.5;
 }
-.scratch03{
-  mix-blend-mode: difference;
-  height: 100vh;
-  width: 130vw;
-  position: absolute;
-  clip-path: polygon(0 0, 100% 0, 100% 98%, 100% 0);
-  transition: clip-path 0.05s ease-in-out;
-
 }

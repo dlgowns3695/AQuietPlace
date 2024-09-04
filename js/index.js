@@ -352,7 +352,7 @@ $(window).scroll(function() {
         } else {
             // 스크롤 위치가 이동 위치를 넘어서지 않을 때 초기 위치로 되돌림
             monsterinfo.css({
-                'transform': 'translate(-50%, -50%)'
+                'transform': ''
             });
         }
         
@@ -413,28 +413,6 @@ const s3 = gsap.timeline({
     .to('.carGuide > img', {x: '0vw',})
     .to('.carGuide > img', {y: '5vw',
 })
-
-gsap.timeline({
-    scrollTrigger: {
-        trigger: '.line02',
-        start: '-450px top',
-        end: 'bottom top',
-        scrub: true, // 스크롤에 따라 애니메이션이 연동되도록
-        // markers: true // 디버깅을 위해 스크롤 트리거의 시작과 끝을 표시
-    }
-})
-// // 두 번 깜빡이는 애니메이션
-// .to('.lightLeft, .lightRight', {
-//     opacity: 1,
-//     duration: 0.1,
-//     repeat: 2,
-//     yoyo: true,
-//     stagger: 0.1
-// })
-// 최종 상태로 라이트를 완전히 켜는 애니메이션
-.to('.lightLeft, .lightRight', {
-    opacity: 1,
-});
 
 
 
@@ -859,23 +837,23 @@ gsap.to('.scrollTextMain04', {
 });
 
 
-// ScrollTrigger를 사용하여 각 이미지의 등장을 감지하고 처리
-ScrollTrigger.create({
+// // ScrollTrigger를 사용하여 각 이미지의 등장을 감지하고 처리
+// ScrollTrigger.create({
     
-    trigger: '.video', // 감지할 요소 선택자
-    pin:true,
-    start: 'top 0%', // 트리거 요소가 뷰포트 상단에서 80% 위치에 도달하면 등장
-    end:'2000px',
-    onEnter: function() { // 트리거 요소가 화면에 진입했을 때 실행되는 함수
-        // human01이 화면에 들어왔을 때의 동작을 여기에 작성
-        gsap.to('.mainlogo', { duration: 2.5, scale: 0.5, ease: 'power2.out' });
-    },
-    onLeaveBack: function() { // 트리거 요소가 화면에서 벗어났을 때 실행되는 함수
-        // human01이 화면에서 나갔을 때의 동작을 여기에 작성
-        gsap.to('.mainlogo', { duration: 2.5, scale: 0, ease: 'power2.out' });
-    },
-   // markers: true // ScrollTrigger 디버깅을 위한 마커 활성화
-});
+//     trigger: '.video', // 감지할 요소 선택자
+//     pin:true,
+//     start: 'top 0%', // 트리거 요소가 뷰포트 상단에서 80% 위치에 도달하면 등장
+//     end:'2000px',
+//     onEnter: function() { // 트리거 요소가 화면에 진입했을 때 실행되는 함수
+//         // human01이 화면에 들어왔을 때의 동작을 여기에 작성
+//         gsap.to('.mainlogo', { duration: 2.5, scale: 0.5, ease: 'power2.out' });
+//     },
+//     onLeaveBack: function() { // 트리거 요소가 화면에서 벗어났을 때 실행되는 함수
+//         // human01이 화면에서 나갔을 때의 동작을 여기에 작성
+//         gsap.to('.mainlogo', { duration: 2.5, scale: 0, ease: 'power2.out' });
+//     },
+//    // markers: true // ScrollTrigger 디버깅을 위한 마커 활성화
+// });
 
 
 

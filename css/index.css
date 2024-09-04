@@ -459,8 +459,9 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
     
     top: 50%;
     left: 50%;
-    z-index: 999;
-    /* transform: translate(0, -50%); */
+    z-index: 99999;
+    transform: translate(0, -50%);
+   
 
 }
 
@@ -1540,20 +1541,9 @@ animation: text_list 60s linear infinite;
 
 }
 @media screen and (max-width:768px){
-    .loading-percent span{font-size: 7rem;}
-    /* body{background-color: aquamarine;} */
+   
 
-    .nextloadingRed{padding: 1rem;}
-    .nextloadingRed .nextLoadingText{font-size:4rem;}
-    .nextloadingRed .nextLoadingTextBot{flex: none;}
 
-    .nextloadingBlack{
-        padding: 1rem; 
-        gap: 20rem;     
-        flex-direction: column;
-        justify-content: center;   
-    }
-    .nextloadingBlack .nextLoadingText{font-size:4rem;}
 
     #section1 .intro {height:100dvh;}
     #section1 .introSOS{width: 80%; margin: 0 auto;padding: 0;height: 100dvh;position: relative;top: 50%;transform: translateY(-16%);}
@@ -1624,7 +1614,10 @@ animation: text_list 60s linear infinite;
     .monsterDec .wrapper .monsterMargin{margin: 0;}
     .monsterDec h3{font-size:3rem;margin-bottom:2rem;}
 
-    .monsterinfo li{width: 80vw;}
+    .monsterinfo li{
+        transform: translate(-50%, -50%);
+        width: 80vw;
+    }
     .monsterinfo li img{
         width: 100%;
         
@@ -1637,7 +1630,7 @@ animation: text_list 60s linear infinite;
 
     .scrollTextMain01 p, .scrollTextMain02 p,.scrollTextMain03 p,.scrollTextMain04 p{font-size: 2rem; background-size: 80%;}
 
-    .subIntro .textIntroImgIntro .textIntro{font-size: 7rem; display: flex;flex-direction: column;gap: 5rem; }
+    .subIntro .textIntroImgIntro .textIntro{font-size: 7rem; display: flex;flex-direction: column;gap: 7rem; }
 
     .subIntro .textIntroImgIntro .textIntro hr{margin: 10px;}
     .subIntro .textIntroImgIntro .textIntro .text01{transform: translate(500px, 0px);}
@@ -1651,7 +1644,7 @@ animation: text_list 60s linear infinite;
     .subIntro .textIntroImgIntro .textIntro .textHr02 {width: 6000px; border-color: #750722; transform: translate(-6500px, 0px);}
     .subIntro .textIntroImgIntro .textIntro .textHr03 {display: none;}
     /* .subIntro .textIntroImgIntro .textIntro .textHr03 {width: 7200px; border-color: #750722; transform: translate(2000px, 0px);} */
-
+    .characterInfo{top: -18%;}
     .characterInfo img{max-width: 60%; height: auto;}
 
 
