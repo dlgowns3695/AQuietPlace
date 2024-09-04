@@ -239,11 +239,18 @@
 
   .nextloadingBlack{
       padding: 1rem; 
-      gap: 39rem;     
+      gap: 30rem;     
       flex-direction: column;
       justify-content: center;   
   }
   .nextloadingBlack .nextLoadingText span{font-size:4.7rem;}
+  .nextloadingBlack .nextLoadingTextTop{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: nowrap;
+  }
   .nextloadingBlack .nextLoadingTextBot{
     display: flex;
     justify-content: space-between;

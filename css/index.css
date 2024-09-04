@@ -422,7 +422,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
     align-items: center;
     justify-content: center; /* 가로 중앙 정렬 */
 }
-.monsterDec .wrapper .titleSize{width:40%;flex:none;}
+/* .monsterDec .wrapper .titleSize{width:40%;flex:none;} */
 .monsterDec .wrapper .title {
     /* background-color: antiquewhite; */
     font-size: 7rem;
@@ -1261,7 +1261,7 @@ animation: text_list 60s linear infinite;
 @media (max-width:1600px){
     #header .logo{position: absolute; top: 8.1vh; left: 12.5vw;}
     #header .menu {top: 8vh; right: 10vh;}
-    .monsterDec .wrapper .title {font-size: 6.2rem;   }
+    .monsterDec .wrapper .title {font-size: 5rem;   }
     .monsterDec .wrapper .monsterMargin{margin-left:100px;}
 
     .top .house{left: -300px}
