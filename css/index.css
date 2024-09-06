@@ -1089,17 +1089,29 @@ animation: text_list 60s linear infinite;
 }
 
 
-.top .house{position: absolute; top: 400px; left: 0; z-index:99;}
+.top .house{
+    position: absolute; top: 0px; left: 0; z-index:99;
+}
+/* .top .house img{
+    bottom: 35vh;
+    position: absolute;
+    
+} */
 .top .house .houseDiv{
     position: absolute;
     background-color: transparent;
     
-    top: 620px; left:580px;
-    width: 400px; height: 400px;
+    top: 270px;
+    left: 680px;
+    width: 300px; height: 300px;
     border-radius: 50%;
     z-index:9999; 
 }
-.top .house .houseHover{position: absolute; top: 0; left: 0; z-index:999; display: none;}
+.top .house img{position: relative; top: -350px;}
+.top .house .houseHover{
+    position: absolute;     
+    top: -370px;
+    left: 50px; z-index:999; display: none;}
 
 .top .topDim {
     position: absolute;
@@ -1708,9 +1720,7 @@ animation: text_list 60s linear infinite;
     
     .top .textHelp p{font-size: 3.5rem;}
 
-    .top .house{
-        /* background-color: antiquewhite; */
-        position: absolute; top:1500px; left: -250px; z-index:99;/* 1600 -400px */}
+
     .top .house img{max-width: 300%; height: auto;}
 
 
@@ -1722,16 +1732,19 @@ animation: text_list 60s linear infinite;
         position: absolute;
         background-color: transparent;
         
-        top: 620px; left:580px;
+        top: 440px;
+        left: 485px;
         width: 400px; height: 400px;
         border-radius: 50%;
         z-index:9999; 
     
         /* background: url('/images/집/horrohouseHover02.png'); */
     }
+    .top .house img{position: relative; top: 0px;}
     .top .house .houseHover{
         position: absolute; top: 0; left: 0; z-index:999; display: none;
     }
+    .backgroundBlack{top: 0; z-index: 99;}
     
     .credit .credith3 {font-size: 12rem;}
     .section h3{font-size: 5rem;}

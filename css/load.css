@@ -229,7 +229,7 @@
 
 @media screen and (max-width:768px){
   
-
+  .loading-percent{bottom: 5vh;}
   .loading-percent span{font-size: 7rem;}
   /* body{background-color: aquamarine;} */
 
@@ -242,7 +242,7 @@
 
   .nextloadingBlack{
       padding: 1rem; 
-      gap: 12rem;     
+      /* gap: 12rem;      */
       flex-direction: column;
       justify-content: center;   
   }

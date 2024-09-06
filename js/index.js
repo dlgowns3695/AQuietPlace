@@ -174,24 +174,10 @@ gsap.to('.netflix', {
         end: '5000px',
         pin: true,
         scrub: true,
-        //pinSpacing: false,
-        // markers: true,
-        
     }
     
 });
 
-// gsap.to('.monsterDec', {
-//     scrollTrigger: {
-//         trigger: '.monsterDec',
-//         start: 'top 80%',
-//         // end: '5000px',
-//         scrub: true,
-//         markers: true,
-        
-//     }
-    
-// });
 
 gsap.timeline({
     scrollTrigger: {
@@ -199,11 +185,8 @@ gsap.timeline({
       scrub: true,
       start: 'top 15%',
       end: '+=600px',
-      
-    //   markers: true,
     }
   }).to('.monsterDec', {opacity: 1})
-
 
 
 gsap.to('.monsterDec .wrapper .title', {
@@ -286,10 +269,6 @@ gsap.to('.waveDim', {
         }
     }
 });
-
-
-
-
 
 
 
@@ -837,25 +816,6 @@ gsap.to('.scrollTextMain04', {
 });
 
 
-// // ScrollTrigger를 사용하여 각 이미지의 등장을 감지하고 처리
-// ScrollTrigger.create({
-    
-//     trigger: '.video', // 감지할 요소 선택자
-//     pin:true,
-//     start: 'top 0%', // 트리거 요소가 뷰포트 상단에서 80% 위치에 도달하면 등장
-//     end:'2000px',
-//     onEnter: function() { // 트리거 요소가 화면에 진입했을 때 실행되는 함수
-//         // human01이 화면에 들어왔을 때의 동작을 여기에 작성
-//         gsap.to('.mainlogo', { duration: 2.5, scale: 0.5, ease: 'power2.out' });
-//     },
-//     onLeaveBack: function() { // 트리거 요소가 화면에서 벗어났을 때 실행되는 함수
-//         // human01이 화면에서 나갔을 때의 동작을 여기에 작성
-//         gsap.to('.mainlogo', { duration: 2.5, scale: 0, ease: 'power2.out' });
-//     },
-//    // markers: true // ScrollTrigger 디버깅을 위한 마커 활성화
-// });
-
-
 
 $('.wrapper .menuslide a').click(function(e){
     e.preventDefault(); // 기본 동작 방지
@@ -1004,17 +964,12 @@ $('.top .house .houseDiv').on('mouseleave',function(){
 })
 
 
-// $('.top .house .houseDiv').on('touchstart', function(e){
-//     e.preventDefault(); // 기본 터치 동작 중지
-//     console.log('터치 이벤트 발동1');
-//     $('.houseHover').css('display', 'block');
-// });
-$('.top .house img').on('touchstart', function(e){
+$('.top .house .houseDiv').on('touchstart', function(e){
     e.preventDefault(); // 기본 터치 동작 중지
     // console.log('터치 이벤트 발동2');
     $('.houseHover').css('display', 'block');
 });
-$('.top .house img').on('touchend', function(e){
+$('.top .house .houseDiv').on('touchend', function(e){
     e.preventDefault(); // 기본 터치 동작 중지
     // console.log('터치 이벤트 발동3');
     $('.houseHover').css('display', 'none');
