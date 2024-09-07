@@ -1150,7 +1150,7 @@ animation: text_list 60s linear infinite;
 .characters{overflow: hidden;height: 6000px;}
 .characters .charactersHuman{position: relative;}
 
-.backgroundBlack{z-index: 999999999; position: relative; top:1000px; background-color:rgb(0, 0, 0); width: 100%; height: 1500px; margin-bottom: 1000px;}
+.backgroundBlack{z-index: 999; position: relative; top:1000px; background-color:rgb(0, 0, 0); width: 100%; height: 1500px; margin-bottom: 1000px;}
 
 
 
@@ -1265,9 +1265,14 @@ animation: text_list 60s linear infinite;
 .footer .logos img {margin: 10px;}
 
 
+@media (max-width:1780px){
+
+    .top .textHelp p {font-size: 14rem;}
+
+}
 @media (max-width:1700px){
 
-    .top .textHelp p {font-size: 15rem;}
+    .top .textHelp p {font-size: 12rem;}
 
 }
 
@@ -1278,18 +1283,18 @@ animation: text_list 60s linear infinite;
     .monsterDec .wrapper .monsterMargin{margin-left:100px;}
 
     .top .house{left: -300px}
-    .top .textHelp p {font-size: 14rem;}
+    .top .textHelp p {font-size: 9rem;}
 
     .moveCut{top: -7500px;}
 }
 @media (max-width:1500px){
 
-    .top .textHelp p {font-size: 12rem;}
+    /* .top .textHelp p {font-size: 12rem;} */
 
 }
 @media (max-width:1400px){
 
-    .top .textHelp p {font-size: 11rem;}
+    /* .top .textHelp p {font-size: 11rem;} */
 
 }
 @media (max-width:1200px){
@@ -1509,7 +1514,7 @@ animation: text_list 60s linear infinite;
         margin-left: 7000px; 
     }
 
-    .top .textHelp p{font-size: 8.5rem;}
+    .top .textHelp p{font-size: 6.5rem;}
 
     
     .credit .credith3 {font-size: 12rem;}
@@ -1550,7 +1555,7 @@ animation: text_list 60s linear infinite;
 }
 @media (max-width:900px){
 
-    .top .textHelp p {font-size: 7.5rem;}
+    /* .top .textHelp p {font-size: 6.5rem;} */
 
 }
 @media screen and (max-width:768px){

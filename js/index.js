@@ -952,7 +952,7 @@ gsap.to('.house', {
         end: '5000px', 
         pin:true,
         // scrub: true, 
-       markers: true,
+    //    markers: true,
     }
 });
 
