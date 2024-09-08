@@ -821,7 +821,7 @@ $('.wrapper .menuslide a').click(function(e){
     e.preventDefault(); // 기본 동작 방지
 
     // 각 인덱스에 해당하는 스크롤 위치 배열
-    var scrollPositions = [0, 9200, 19800, 28100, 50600];
+    var scrollPositions = [0, 9200, 19800, 33000, 50600];
 
     var index = $(this).parent().index(); // 클릭된 요소의 인덱스 가져오기
     var scrollPosition = scrollPositions[index]; // 해당 인덱스에 해당하는 스크롤 위치 가져오기

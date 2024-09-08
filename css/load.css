@@ -129,8 +129,8 @@
   
   }
   .nextloadingRed .nextLoadingText span{font-size: 13rem;}
-  .nextloadingRed .nextLoadingTextTop{display: flex; justify-content: space-between;}
-  .nextloadingRed .nextLoadingTextBot{display: flex; }
+  .nextloadingRed .nextLoadingTextTop{ display: flex; justify-content: space-between;}
+  .nextloadingRed .nextLoadingTextBot{ display: flex; }
 
   .nextloadingRed #loadingText1,
   .nextloadingRed #loadingText2,
@@ -168,8 +168,8 @@
     opacity: 0;
   }
   .nextloadingBlack .nextLoadingText span{font-size: 13rem;}
-  .nextloadingBlack .nextLoadingTextTop{display: flex; justify-content: space-between;}
-  .nextloadingBlack .nextLoadingTextBot{display: flex; justify-content: space-between;}
+  .nextloadingBlack .nextLoadingTextTop{padding: 2rem; display: flex; justify-content: space-between;}
+  .nextloadingBlack .nextLoadingTextBot{padding: 2rem; display: flex; justify-content: space-between;}
 
   .nextloadingBlack #loadingBlackText1,
   .nextloadingBlack #loadingBlackText2,
