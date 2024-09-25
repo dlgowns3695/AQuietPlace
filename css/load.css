@@ -222,6 +222,7 @@
 
 @media (max-width:1024px){
   .nextloadingRed .nextLoadingText span{font-size: 8rem;}
+  .nextloadingBlack .nextLoadingText span{font-size: 10rem;}
  
 }
 
