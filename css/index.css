@@ -35,7 +35,7 @@ body.dark {background-color: #fff;} /* #9b59b6 */
     transition: height 0.5s ease, width 0.5s ease;
     pointer-events: none;
     mix-blend-mode: difference;
-    z-index:999999;
+    z-index:999999999999999;
 }
 .cursor img{width: 100%; height: 100%;}
 
@@ -48,7 +48,7 @@ body.dark {background-color: #fff;} /* #9b59b6 */
     height: 100px;
     opacity: 0;
     pointer-events: none;
-    z-index:999999;
+    z-index:999999999999999;
 }
 .shot img{width: 100%; height: 100%;}
 /***** 스크롤바 *****/
@@ -99,13 +99,13 @@ body::-webkit-scrollbar {
 #section1{width: 100%; overflow: hidden;}
 
 /***** header 쪽 *****/
-#header{position: fixed; top: 0; left: 0;width: 100%; background-color: #fff; transition: opacity 0.1s; z-index: 9999;}
+#header{position: fixed; top: 0; left: 0;width: 100%; background-color: #fff; transition: opacity 0.1s; z-index: 999999;}
 #header .headerContainer{width: 80%;}
 
 /***** header logo 쪽 *****/
 #header .logo{position: absolute; top: 80px; left: 80px;}
 #header img{width: 200px;}
-#header .menu { position: absolute; right: 80px; top: 80px;width: 30px; height: 30px;}
+#header .menu { position: absolute; z-index: 1000000000000000000; right: 80px; top: 80px;width: 30px; height: 30px;}
 #header .menu img { width: 100%; }
 
 
@@ -127,7 +127,7 @@ body::-webkit-scrollbar {
     background-color: rgba(0,0,0,1);
     transition: left 0.6s ease;
 
-    z-index: 9999999999;
+    z-index: 9999999999999999999999999;
 
 
 }
@@ -460,7 +460,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
     
     top: 50%;
     left: 50%;
-    z-index: 99999;
+    z-index: 10;
     transform: translate(0, -50%);
    
 
@@ -483,7 +483,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-35%, -70%);
 
     
     /* background-color: antiquewhite; */
-    z-index: 99999;
+    /* z-index: 99999; */
 
     
 }
@@ -1443,7 +1443,7 @@ animation: text_list 60s linear infinite;
     .moveCut {top: -6500px;}
     .scrollTextMain01 p, .scrollTextMain02 p,.scrollTextMain03 p,.scrollTextMain04 p{font-size: 4rem; background-size: 85%;}
 
-    .subIntro .textIntroImgIntro .textIntro{font-size: 16rem;}
+    .subIntro .textIntroImgIntro .textIntro{font-size: 16rem; margin-top: 100px;}
     .subIntro .textIntroImgIntro .textIntro hr{margin: 10px;}
     .subIntro .textIntroImgIntro .textIntro .text01{transform: translate(500px, 0px);}
     .subIntro .textIntroImgIntro .textIntro .text02{transform: translate(-15000px, 0px); -webkit-text-stroke: 2px #db0137; text-stroke: 2px #db0137;color:transparent}
@@ -1456,7 +1456,7 @@ animation: text_list 60s linear infinite;
     .subIntro .textIntroImgIntro .textIntro .textHr03 {width: 7200px; border-color: #750722; transform: translate(2000px, 0px);}
 
     /* .characterInfo img{max-width: 100%; height: auto;} */
-    
+    /* .characterInfo{top: -60%;} */
     .characterInfo .human01{
         width: 471px;
         height: 598px;
